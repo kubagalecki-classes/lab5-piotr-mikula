@@ -12,6 +12,7 @@ int main()
     for (int i = 0; i < 10; i++) {
         v.push_back(2 * i);
         cout << "Rozmiar: " << v.size() << " Pojemnosc: " << v.capacity() << endl;
+        cout << "Adres pierwszego elementu: " << &v[0] << endl;
     }
 
     puts("\nOstatnia linijka kodu!");
