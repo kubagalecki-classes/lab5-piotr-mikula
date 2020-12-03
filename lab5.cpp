@@ -37,8 +37,11 @@ int main()
 
     cout << "\nMOI LUDZIE TO\n";
     for (unsigned int i = 0; i < people.size(); i++) {
-        cout << people[i].getName() << " " << people[i].getAge() << " " << people[i].isMonster()
-             << endl;
+        cout << people[i].getName() << ", " << people[i].getAge() << " lat, ";
+        if (people[i].isMonster() == 1)
+            cout << "POTWOR\n";
+        if (people[i].isMonster() == 0)
+            cout << "KOKS\n";
     }
 
     puts("\nOstatnia linijka kodu!");
