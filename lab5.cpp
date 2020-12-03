@@ -16,8 +16,8 @@ int main()
     cout << "Pierwszy element: " << lista.front() << ", Ostatni element: " << lista.back() << endl;
 
     cout << "\nDrukowanie elementow od pierwszego do ostatniego\n";
-    for (list< int >::iterator it = lista.begin(); it != lista.end(); ++it)
-        cout << *it << endl;
+    for (const int& e : lista)
+        cout << e << endl;
 
     puts("\nOstatnia linijka kodu!");
 }

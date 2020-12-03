@@ -7,6 +7,17 @@
 
 std::vector< char > foo(std::list< Human >& people)
 {
-    // Twoja implementacja tutaj
-    return {};
+    std::vector<char> vector;
+    for(auto r_it = people.rbegin(); r_it != people.rend(); r_it++)
+    {
+      //inkrementacja pola age 
+      r_it->birthday();
+
+      if(r_it->isMonster() == true)
+      vector.push_back('n');
+      else if (r_it->isMonster()==false)
+      vector.push_back('y');
+    }
+
+    return {vector};
 }
