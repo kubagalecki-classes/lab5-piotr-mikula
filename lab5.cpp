@@ -1,21 +1,39 @@
+#include "Human.hpp"
 #include <iostream>
+#include <string>
 #include <vector>
 using namespace std;
 
 int main()
 {
-    vector< int > v(100, 42);
-    cout << "Rozmiar wektora v = " << v.size() << endl;
-    cout << "Pojemnosc wektora v = " << v.capacity() << endl;
-    for (int i = 0; i < 15; i++)
-        cout << v[i] << endl;
-    cout << "\n";
+    vector< Human > people;
+    string          imie;
+    unsigned int    wiek;
+    bool            ld;
+    bool            lk;
+    for (int i = 0; i < 3; i++) {
+        cout << "Podaj imie:\t";
+        cin >> imie;
+        cout << "Podaj wiek:\t";
+        cin >> wiek;
+        cout << "Czy lubi pjeski (1 - tak, 0 - nie)\t";
+        cin >> ld;
+        cout << "Czy lubi koty (1 - tak, 0 - nie)\t";
+        cin >> lk;
+        cout << "\n";
 
-    vector< int > x{100, 42};
-    cout << "Rozmiar wektora x = " << v.size() << endl;
-    cout << "Pojemnosc wektora x = " << v.capacity() << endl;
-    for (int i = 0; i < 15; i++)
-        cout << x[i] << endl;
+        Human temp{imie, wiek, ld, lk};
+        people.push_back(temp);
+    }
+
+    cout << "Wektor\n";
+    cout << "rozmiar: " << people.size() << ", pojemnosc: " << people.capacity() << endl;
+
+    cout << "\nMOI LUDZIE TO\n";
+    for (unsigned int i = 0; i < people.size(); i++) {
+        cout << people[i].getName() << " " << people[i].getAge() << " " << people[i].isMonster()
+             << endl;
+    }
 
     puts("\nOstatnia linijka kodu!");
 }
