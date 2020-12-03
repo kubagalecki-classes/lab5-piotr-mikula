@@ -22,5 +22,8 @@ int main()
     cout << "Pierwszy element: " << &lista.front() << ", Ostatni element: " << &lista.back()
          << endl;
 
+    // cout << lista[2] << endl;
+    //^ po odkomentowaniu wyskakuje error
+
     puts("\nOstatnia linijka kodu!");
 }
