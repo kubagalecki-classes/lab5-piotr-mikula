@@ -14,6 +14,12 @@ int main()
     for (int i = 0; i < 3; i++) {
         cout << "Podaj imie:\t";
         cin >> imie;
+        if (imie == "skasuj") {
+            people.pop_back();
+            i--;
+            cout << "Podaj imie:\t";
+            cin >> imie;
+        }
         cout << "Podaj wiek:\t";
         cin >> wiek;
         cout << "Czy lubi pjeski (1 - tak, 0 - nie)\t";
