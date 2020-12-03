@@ -7,7 +7,8 @@ int main()
 {
     list< int > lista;
     lista.push_back(14);
-    cout << "Pierwszy element: " << lista.front() << " Ostatni element: " << lista.back() << endl;
+    lista.push_front(3);
+    cout << "Pierwszy element: " << lista.front() << ", Ostatni element: " << lista.back() << endl;
 
     puts("\nOstatnia linijka kodu!");
 }
