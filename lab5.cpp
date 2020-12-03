@@ -14,5 +14,13 @@ int main()
     cout << "Pierwszy element: " << &lista.front() << ", Ostatni element: " << &lista.back()
          << endl;
 
+    cout << "\nDodanie kilku elementow na poczatek listy\n";
+    lista.push_front(1);
+    lista.push_front(5);
+    lista.push_front(10);
+    cout << "Adresy:\n";
+    cout << "Pierwszy element: " << &lista.front() << ", Ostatni element: " << &lista.back()
+         << endl;
+
     puts("\nOstatnia linijka kodu!");
 }
